@@ -13,4 +13,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run linterCheck
-        run: make lint
+        run: |
+          make lint
