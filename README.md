@@ -6,5 +6,5 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-brain-even Asciinema
-<https://asciinema.org/a/JKxcF4V3uY7w8oImzmOcEugN3>
+brain-even
+[![asciicast](https://asciinema.org/a/JKxcF4V3uY7w8oImzmOcEugN3.svg)](https://asciinema.org/a/JKxcF4V3uY7w8oImzmOcEugN3)
