@@ -1,4 +1,7 @@
 install: 
+	npm install
+
+male link:
 	npm link @hexlet/code --dry-run
 
 brain-games:
@@ -9,6 +12,9 @@ brain-even:
 
 brain-calc:
 	node bin/brain-calc.js
+
+brain-gcd:
+	node bin/brain-gcd.js
 
 publish: 
 	npm publish --dry-run

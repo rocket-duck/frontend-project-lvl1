@@ -1,13 +1,14 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "description": "[![Actions Status](https://github.com/rocket-duck/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/rocket-duck/frontend-project-lvl1/actions)",
   "main": "index.js",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,12 +25,12 @@
   "homepage": "https://github.com/rocket-duck/frontend-project-lvl1#readme",
   "dependencies": {
     "@hexlet/pairs": "^1.1.0",
-    "prettier": "^2.2.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.22.1",
+    "prettier": "^2.2.0"
   }
 }

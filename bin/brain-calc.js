@@ -5,13 +5,13 @@ import random from '../src/random.js';
 const gameNotice = 'What is the result of the expression?';
 
 const minNumber = 1;
-const maxNumber = 10;
+const maxNumber = 100;
 
 const symbols = ['+', '-', '*'];
 const startSymbol = 0;
 const lastSymbol = symbols.length;
 
-const correctAnswer = (firstNumber, symbol, secondNumber) => {
+const getCorrectAnswer = (firstNumber, symbol, secondNumber) => {
   if (symbol === '+') {
     return firstNumber + secondNumber;
   }
@@ -23,15 +23,15 @@ const correctAnswer = (firstNumber, symbol, secondNumber) => {
 };
 
 const createGameData = () => {
-  const generateFirstNumber = random(minNumber, maxNumber);
-  const generateSecondNumber = random(minNumber, maxNumber);
-  const generateSymbol = symbols[random(startSymbol, lastSymbol)];
+  const firstNumber = random(minNumber, maxNumber);
+  const secondNumber = random(minNumber, maxNumber);
+  const symbol = symbols[random(startSymbol, lastSymbol)];
 
-  const getQuestion = `${generateFirstNumber} ${generateSymbol} ${generateSecondNumber}`;
+  const question = `${firstNumber} ${symbol} ${secondNumber}`;
 
   return [
-    getQuestion,
-    correctAnswer(generateFirstNumber, generateSymbol, generateSecondNumber).toString(),
+    question,
+    getCorrectAnswer(firstNumber, symbol, secondNumber).toString(),
   ];
 };
 

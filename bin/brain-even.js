@@ -9,8 +9,8 @@ const maxNumber = 1000;
 const correctAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 const createGameData = () => {
-  const getQuestion = random(minNumber, maxNumber);
-  return [getQuestion, correctAnswer(getQuestion)];
+  const question = random(minNumber, maxNumber);
+  return [question, correctAnswer(question)];
 };
 
 gameGreetings(gameNotice);
