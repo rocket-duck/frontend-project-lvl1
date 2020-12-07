@@ -1,5 +1,5 @@
 install: 
-	npm install
+	npm link @hexlet/code --dry-run
 
 brain-games:
 	node bin/brain-games.js
