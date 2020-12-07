@@ -1,4 +1,4 @@
-### Hexlet tests and linter status
+# Hexlet tests and linter status
 
 [![Actions Status](https://github.com/rocket-duck/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/rocket-duck/frontend-project-lvl1/actions)
 
@@ -6,7 +6,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-# Games
+## Games
 
 * **brain-even**
 
@@ -19,3 +19,7 @@
 * **brain-gcd**
 
   * [![asciicast](https://asciinema.org/a/quizzLEGVsd0UQfixWlmSpxH9.svg)](https://asciinema.org/a/quizzLEGVsd0UQfixWlmSpxH9)
+
+* **brain-progression**
+
+  * [![asciicast](https://asciinema.org/a/J0b008Tl3bguwhYbJDelpdxYm.svg)](https://asciinema.org/a/J0b008Tl3bguwhYbJDelpdxYm)

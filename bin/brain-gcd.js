@@ -5,7 +5,7 @@ import random from '../src/random.js';
 const gameNotice = 'Find the greatest common divisor of given numbers.';
 
 const minNumber = 1;
-const maxNumber = 10;
+const maxNumber = 100;
 
 const getCorrectAnswer = (firstNumber, secondNumber) => {
   if (secondNumber > firstNumber) {
