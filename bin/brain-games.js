@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import askName from '../src/cli.js';
+import getName from '../src/cli.js';
 
-const getName = askName;
-const greetings = `Hello, ${getName}!`;
+const userName = getName;
+const greetings = `Hello, ${userName}!`;
 
 console.log(greetings);
