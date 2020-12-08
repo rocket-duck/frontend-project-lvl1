@@ -8,18 +8,27 @@
 
 ## Games
 
-* **brain-even**
+Welcome to BrainGames.
+To install game:
+  ```make install```
 
-  * [![asciicast](https://asciinema.org/a/lQeRpDijI2qbhEa8OaBMZLdAV.svg)](https://asciinema.org/a/lQeRpDijI2qbhEa8OaBMZLdAV)
+To start game:
+  ```make brain-even```
 
-* **brain-calc**
+* [![asciicast](https://asciinema.org/a/lQeRpDijI2qbhEa8OaBMZLdAV.svg)](https://asciinema.org/a/lQeRpDijI2qbhEa8OaBMZLdAV)
 
-  * [![asciicast](https://asciinema.org/a/6KsIvUxKlJaOMloWNC81zyXFt.svg)](https://asciinema.org/a/6KsIvUxKlJaOMloWNC81zyXFt)
+  ```make brain-calc```
 
-* **brain-gcd**
+* [![asciicast](https://asciinema.org/a/6KsIvUxKlJaOMloWNC81zyXFt.svg)](https://asciinema.org/a/6KsIvUxKlJaOMloWNC81zyXFt)
 
-  * [![asciicast](https://asciinema.org/a/quizzLEGVsd0UQfixWlmSpxH9.svg)](https://asciinema.org/a/quizzLEGVsd0UQfixWlmSpxH9)
+  ```make brain-gcd```
 
-* **brain-progression**
+* [![asciicast](https://asciinema.org/a/quizzLEGVsd0UQfixWlmSpxH9.svg)](https://asciinema.org/a/quizzLEGVsd0UQfixWlmSpxH9)
 
-  * [![asciicast](https://asciinema.org/a/J0b008Tl3bguwhYbJDelpdxYm.svg)](https://asciinema.org/a/J0b008Tl3bguwhYbJDelpdxYm)
+  ```make brain-progression```
+
+* [![asciicast](https://asciinema.org/a/J0b008Tl3bguwhYbJDelpdxYm.svg)](https://asciinema.org/a/J0b008Tl3bguwhYbJDelpdxYm)
+
+  ```make brain-prime```
+
+* [![asciicast](https://asciinema.org/a/7Mhmr5fLx396prgxxUPoPvUWc.svg)](https://asciinema.org/a/7Mhmr5fLx396prgxxUPoPvUWc)

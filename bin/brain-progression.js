@@ -5,7 +5,7 @@ import random from '../src/random.js';
 const gameNotice = 'What number is missing in the progression?';
 
 const minNumber = 1;
-const maxNumber = 10;
+const maxNumber = 100;
 
 const minProgressionLength = 5;
 const maxProgressionLength = 10;
@@ -33,13 +33,13 @@ const createGameData = () => {
     progressionStep,
     progressionLength,
   );
-  const getCorrectAnswer = makeQuestion[questionPosition].toString();
+  const correctAnswer = makeQuestion[questionPosition].toString();
   makeQuestion[questionPosition] = '..';
   const question = makeQuestion.join(' ');
 
   return [
     question,
-    getCorrectAnswer,
+    correctAnswer,
   ];
 };
 

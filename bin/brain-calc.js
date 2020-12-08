@@ -11,7 +11,7 @@ const symbols = ['+', '-', '*'];
 const startSymbol = 0;
 const lastSymbol = symbols.length;
 
-const getCorrectAnswer = (firstNumber, symbol, secondNumber) => {
+const calculate = (firstNumber, symbol, secondNumber) => {
   if (symbol === '+') {
     return firstNumber + secondNumber;
   }
@@ -28,10 +28,11 @@ const createGameData = () => {
   const symbol = symbols[random(startSymbol, lastSymbol)];
 
   const question = `${firstNumber} ${symbol} ${secondNumber}`;
+  const correctAnswer = calculate(firstNumber, symbol, secondNumber).toString();
 
   return [
     question,
-    getCorrectAnswer(firstNumber, symbol, secondNumber).toString(),
+    correctAnswer,
   ];
 };
 

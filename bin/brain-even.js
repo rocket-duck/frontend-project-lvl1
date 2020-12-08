@@ -6,11 +6,16 @@ const gameNotice = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const minNumber = 1;
 const maxNumber = 1000;
-const correctAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
+const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 const createGameData = () => {
   const question = random(minNumber, maxNumber);
-  return [question, correctAnswer(question)];
+  const correctAnswer = isEven(question);
+
+  return [
+    question,
+    correctAnswer,
+  ];
 };
 
 gameGreetings(gameNotice);

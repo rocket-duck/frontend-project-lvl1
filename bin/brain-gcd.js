@@ -7,14 +7,14 @@ const gameNotice = 'Find the greatest common divisor of given numbers.';
 const minNumber = 1;
 const maxNumber = 100;
 
-const getCorrectAnswer = (firstNumber, secondNumber) => {
+const isGCD = (firstNumber, secondNumber) => {
   if (secondNumber > firstNumber) {
-    return getCorrectAnswer(secondNumber, firstNumber);
+    return isGCD(secondNumber, firstNumber);
   }
   if (secondNumber === 0) {
     return firstNumber;
   }
-  return getCorrectAnswer(secondNumber, firstNumber % secondNumber);
+  return isGCD(secondNumber, firstNumber % secondNumber);
 };
 
 const createGameData = () => {
@@ -22,10 +22,11 @@ const createGameData = () => {
   const secondNumber = random(minNumber, maxNumber);
 
   const question = `${firstNumber} ${secondNumber}`;
+  const correctAnswer = isGCD(firstNumber, secondNumber).toString();
 
   return [
     question,
-    getCorrectAnswer(firstNumber, secondNumber).toString(),
+    correctAnswer,
   ];
 };
 
