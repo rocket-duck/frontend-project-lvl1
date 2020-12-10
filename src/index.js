@@ -1,18 +1,15 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
 
-const gameEngine = (gameNotice, gameData) => {
-  const gameGreetings = (notice) => {
-    const greetings = `Hello, ${getName}!`;
-    console.log(greetings);
-    console.log(notice);
-  };
-  gameGreetings(gameNotice);
+const createGame = (gameNotice, gameData) => {
+  console.log('Welcome to the Brain Games!');
+  const getName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${getName}!`);
+  console.log(gameNotice);
 
   const startTryCount = 1;
   const maxTryCount = 3;
 
-  const makeGame = (data, tryCount) => {
+  const makeGameProgress = (data, tryCount) => {
     const correctPhrase = 'Correct!';
     const winPhrase = `Congratulations, ${getName}!`;
 
@@ -21,7 +18,9 @@ const gameEngine = (gameNotice, gameData) => {
     const getAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
     if (correctAnswer !== getAnswer) {
-      return console.log(`'${getAnswer}' is wrong answer ;(.\nCorrect answer was '${correctAnswer}'.\nLet's try again, ${getName}!`);
+      console.log(`'${getAnswer}' is wrong answer `);
+      console.log(`Correct answer was '${correctAnswer}'.`);
+      return console.log(`Let's try again, ${getName}!`);
     }
 
     console.log(correctPhrase);
@@ -30,9 +29,9 @@ const gameEngine = (gameNotice, gameData) => {
       return console.log(winPhrase);
     }
 
-    return makeGame(data, tryCount + 1);
+    return makeGameProgress(data, tryCount + 1);
   };
-  makeGame(gameData, startTryCount);
+  makeGameProgress(gameData, startTryCount);
 };
 
-export default gameEngine;
+export default createGame;

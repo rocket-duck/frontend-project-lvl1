@@ -1,19 +1,19 @@
-import gameEngine from '../src/index.js';
-import random from '../src/random.js';
+import createGame from '../index.js';
+import random from '../random.js';
 
 const gameNotice = 'Find the greatest common divisor of given numbers.';
 
 const minNumber = 1;
 const maxNumber = 100;
 
-const isGCD = (firstNumber, secondNumber) => {
+const findGCD = (firstNumber, secondNumber) => {
   if (secondNumber > firstNumber) {
-    return isGCD(secondNumber, firstNumber);
+    return findGCD(secondNumber, firstNumber);
   }
   if (secondNumber === 0) {
     return firstNumber;
   }
-  return isGCD(secondNumber, firstNumber % secondNumber);
+  return findGCD(secondNumber, firstNumber % secondNumber);
 };
 
 const createGameData = () => {
@@ -21,7 +21,7 @@ const createGameData = () => {
   const secondNumber = random(minNumber, maxNumber);
 
   const question = `${firstNumber} ${secondNumber}`;
-  const correctAnswer = isGCD(firstNumber, secondNumber).toString();
+  const correctAnswer = findGCD(firstNumber, secondNumber).toString();
 
   return [
     question,
@@ -29,4 +29,4 @@ const createGameData = () => {
   ];
 };
 
-export default () => gameEngine(gameNotice, createGameData);
+export default () => createGame(gameNotice, createGameData);

@@ -1,15 +1,15 @@
-import gameEngine from '../src/index.js';
-import random from '../src/random.js';
+import createGame from '../index.js';
+import random from '../random.js';
 
 const gameNotice = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const minNumber = 1;
 const maxNumber = 1000;
-const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
+const isEven = (number) => (number % 2 === 0);
 
 const createGameData = () => {
   const question = random(minNumber, maxNumber);
-  const correctAnswer = isEven(question);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
 
   return [
     question,
@@ -17,4 +17,4 @@ const createGameData = () => {
   ];
 };
 
-export default () => gameEngine(gameNotice, createGameData);
+export default () => createGame(gameNotice, createGameData);

@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "[![Actions Status](https://github.com/rocket-duck/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/rocket-duck/frontend-project-lvl1/actions)",
   "main": "index.js",
   "type": "module",
@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/rocket-duck/frontend-project-lvl1#readme",
   "dependencies": {
-    "@hexlet/pairs": "^1.1.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

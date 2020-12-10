@@ -1,5 +1,5 @@
-import gameEngine from '../src/index.js';
-import random from '../src/random.js';
+import createGame from '../index.js';
+import random from '../random.js';
 
 const gameNotice = 'What number is missing in the progression?';
 
@@ -43,4 +43,4 @@ const createGameData = () => {
   ];
 };
 
-export default () => gameEngine(gameNotice, createGameData);
+export default () => createGame(gameNotice, createGameData);

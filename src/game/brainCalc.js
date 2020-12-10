@@ -1,5 +1,5 @@
-import gameEngine from '../src/index.js';
-import random from '../src/random.js';
+import createGame from '../index.js';
+import random from '../random.js';
 
 const gameNotice = 'What is the result of the expression?';
 
@@ -11,14 +11,22 @@ const startSymbol = 0;
 const lastSymbol = symbols.length;
 
 const calculate = (firstNumber, symbol, secondNumber) => {
-  if (symbol === '+') {
-    return firstNumber + secondNumber;
+  let result;
+  switch (symbol) {
+    case ('+'):
+      result = firstNumber + secondNumber;
+      break;
+    case ('-'):
+      result = firstNumber - secondNumber;
+      break;
+    case ('*'):
+      result = firstNumber * secondNumber;
+      break;
+    default:
+      console.log('Incorrect symbol');
+      break;
   }
-  if (symbol === '-') {
-    return firstNumber - secondNumber;
-  }
-
-  return firstNumber * secondNumber;
+  return result;
 };
 
 const createGameData = () => {
@@ -35,4 +43,4 @@ const createGameData = () => {
   ];
 };
 
-export default () => gameEngine(gameNotice, createGameData);
+export default () => createGame(gameNotice, createGameData);
