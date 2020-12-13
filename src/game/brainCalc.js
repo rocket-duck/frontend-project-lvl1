@@ -11,22 +11,17 @@ const firstOperator = 0;
 const lastOperator = operators.length - 1;
 
 const calculate = (firstNumber, operator, secondNumber) => {
-  let result;
   switch (operator) {
     case ('+'):
-      result = firstNumber + secondNumber;
-      break;
+      return firstNumber + secondNumber;
     case ('-'):
-      result = firstNumber - secondNumber;
-      break;
+      return firstNumber - secondNumber;
     case ('*'):
-      result = firstNumber * secondNumber;
-      break;
+      return firstNumber * secondNumber;
     default:
       console.log('Incorrect symbol');
       break;
   }
-  return result;
 };
 
 const createGameData = () => {
@@ -35,7 +30,7 @@ const createGameData = () => {
   const operator = operators[getRandomNumber(firstOperator, lastOperator)];
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   const correctAnswer = calculate(firstNumber, operator, secondNumber).toString();
-
+  console.log(correctAnswer);
   return [
     question,
     correctAnswer,
