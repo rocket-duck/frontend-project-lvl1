@@ -10,9 +10,6 @@ const createGame = (gameNotice, gameData) => {
   const maxTryCount = 3;
 
   const makeGameProgress = (data, tryCount) => {
-    const correctPhrase = 'Correct!';
-    const winPhrase = `Congratulations, ${getName}!`;
-
     const [question, correctAnswer] = gameData();
 
     const getAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
@@ -20,16 +17,18 @@ const createGame = (gameNotice, gameData) => {
     if (correctAnswer !== getAnswer) {
       console.log(`'${getAnswer}' is wrong answer `);
       console.log(`Correct answer was '${correctAnswer}'.`);
-      return console.log(`Let's try again, ${getName}!`);
+      console.log(`Let's try again, ${getName}!`);
+      return;
     }
 
-    console.log(correctPhrase);
+    console.log('Correct!');
 
     if (tryCount === maxTryCount) {
-      return console.log(winPhrase);
+      console.log(`Congratulations, ${getName}!`);
+      return;
     }
 
-    return makeGameProgress(data, tryCount + 1);
+    makeGameProgress(data, tryCount + 1);
   };
   makeGameProgress(gameData, startTryCount);
 };

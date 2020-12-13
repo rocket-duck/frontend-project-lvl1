@@ -1,18 +1,18 @@
 import createGame from '../index.js';
-import random from '../random.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const gameNotice = 'What is the result of the expression?';
 
 const minNumber = 1;
 const maxNumber = 100;
 
-const symbols = ['+', '-', '*'];
-const startSymbol = 0;
-const lastSymbol = symbols.length;
+const operators = ['+', '-', '*'];
+const firstOperator = 0;
+const lastOperator = operators.length - 1;
 
-const calculate = (firstNumber, symbol, secondNumber) => {
+const calculate = (firstNumber, operator, secondNumber) => {
   let result;
-  switch (symbol) {
+  switch (operator) {
     case ('+'):
       result = firstNumber + secondNumber;
       break;
@@ -30,12 +30,11 @@ const calculate = (firstNumber, symbol, secondNumber) => {
 };
 
 const createGameData = () => {
-  const firstNumber = random(minNumber, maxNumber);
-  const secondNumber = random(minNumber, maxNumber);
-  const symbol = symbols[random(startSymbol, lastSymbol)];
-
-  const question = `${firstNumber} ${symbol} ${secondNumber}`;
-  const correctAnswer = calculate(firstNumber, symbol, secondNumber).toString();
+  const firstNumber = getRandomNumber(minNumber, maxNumber);
+  const secondNumber = getRandomNumber(minNumber, maxNumber);
+  const operator = operators[getRandomNumber(firstOperator, lastOperator)];
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
+  const correctAnswer = calculate(firstNumber, operator, secondNumber).toString();
 
   return [
     question,

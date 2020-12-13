@@ -1,5 +1,5 @@
 import createGame from '../index.js';
-import random from '../random.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const gameNotice = 'What number is missing in the progression?';
 
@@ -23,10 +23,10 @@ const generateProgression = (begin, step, length) => {
 };
 
 const createGameData = () => {
-  const progressionFirstNumber = random(minNumber, maxNumber);
-  const progressionStep = random(minNumber, maxNumber);
-  const progressionLength = random(minProgressionLength, maxProgressionLength);
-  const questionPosition = random(minQuestionPosition, progressionLength);
+  const progressionFirstNumber = getRandomNumber(minNumber, maxNumber);
+  const progressionStep = getRandomNumber(minNumber, maxNumber);
+  const progressionLength = getRandomNumber(minProgressionLength, maxProgressionLength);
+  const questionPosition = getRandomNumber(minQuestionPosition, progressionLength);
 
   const makeQuestion = generateProgression(
     progressionFirstNumber,
