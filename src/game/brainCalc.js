@@ -19,8 +19,7 @@ const calculate = (firstNumber, operator, secondNumber) => {
     case ('*'):
       return firstNumber * secondNumber;
     default:
-      console.log('Incorrect symbol');
-      break;
+      return console.log('Incorrect symbol');
   }
 };
 
@@ -30,7 +29,7 @@ const createGameData = () => {
   const operator = operators[getRandomNumber(firstOperator, lastOperator)];
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   const correctAnswer = calculate(firstNumber, operator, secondNumber).toString();
-  console.log(correctAnswer);
+
   return [
     question,
     correctAnswer,
