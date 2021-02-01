@@ -10,6 +10,11 @@ const createGame = (gameNotice, gameData) => {
   const maxTryCount = 3;
 
   const makeGameProgress = (data, tryCount) => {
+    if (tryCount === maxTryCount) {
+      console.log(`Congratulations, ${getName}!`);
+      return;
+    }
+
     const [question, correctAnswer] = gameData();
 
     const getAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
@@ -22,11 +27,6 @@ const createGame = (gameNotice, gameData) => {
     }
 
     console.log('Correct!');
-
-    if (tryCount === maxTryCount) {
-      console.log(`Congratulations, ${getName}!`);
-      return;
-    }
 
     makeGameProgress(data, tryCount + 1);
   };
